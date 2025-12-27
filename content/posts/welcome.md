@@ -17,6 +17,7 @@ Welcome to my blog! This site is self-hosted on my homelab infrastructure.
 - **Ansible** - Configuration management
 - **Caddy** - Web server with automatic HTTPS
 - **Portainer** - Container management
+- **Storage** - Truenas 56 TB
 
 ## What to Expect
 
