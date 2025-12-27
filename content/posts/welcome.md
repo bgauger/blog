@@ -9,6 +9,8 @@ tags:
 
 Welcome to my blog! This site is self-hosted on my homelab infrastructure.
 
+<!--more-->
+
 ## Tech Stack
 
 - **Hugo** - Static site generator
