@@ -18,6 +18,7 @@ Welcome to my blog! This site is self-hosted on my homelab infrastructure.
 - **OpenTofu** - Infrastructure as code
 - **Ansible** - Configuration management
 - **Caddy** - Web server with automatic HTTPS
+- **Cloudflare Tunnel** - Secure external access
 - **Portainer** - Container management
 - **Storage** - Truenas 56 TB
 
