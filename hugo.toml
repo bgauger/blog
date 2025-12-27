@@ -1,7 +1,7 @@
 baseURL = 'https://blog.bengauger.com/'
 languageCode = 'en-us'
 title = 'Ben Gauger'
-theme = 'hugo-dusk'
+theme = 'terminal'
 
 [params]
   author = 'Ben Gauger'
