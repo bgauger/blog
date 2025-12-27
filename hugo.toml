@@ -1,0 +1,26 @@
+baseURL = 'https://blog.bengauger.com/'
+languageCode = 'en-us'
+title = 'Ben Gauger'
+theme = 'hugo-dusk'
+
+[params]
+  author = 'Ben Gauger'
+  description = 'Homelab, Infrastructure, and Technology'
+  githubUsername = 'bgauger'
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
