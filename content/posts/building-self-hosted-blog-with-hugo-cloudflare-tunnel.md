@@ -692,7 +692,7 @@ And I'm back online in minutes.
 Potential improvements:
 
 - [ ] Add CDN caching for static assets
-- [ ] Implement comment system (maybe isso or utterances)
+- [x] Implement comment system (maybe isso or utterances)
 - [ ] Set up automated backups of blog content
 - [ ] Add analytics (privacy-focused like Plausible)
 - [ ] Create staging environment for preview deployments
