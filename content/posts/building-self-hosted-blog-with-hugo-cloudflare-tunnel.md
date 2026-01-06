@@ -8,6 +8,7 @@ tags:
   - cloudflare
   - gitops
   - infrastructure
+  - automation
 ---
 
 How I built a fully automated, self-hosted blog using Hugo, Cloudflare Tunnel, and GitHub webhooks - all managed through Infrastructure as Code.
