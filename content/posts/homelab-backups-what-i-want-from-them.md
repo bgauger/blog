@@ -2,6 +2,7 @@
 title: "My homelab backup strategy is mostly about distrust"
 date: 2026-05-15
 draft: false
+description: "A practical look at homelab backups, restore tests, GitOps, and why green backup jobs are not enough."
 tags:
   - homelab
   - backups

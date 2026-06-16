@@ -2,6 +2,7 @@
 title: Building a Self-Hosted Blog with Hugo, Cloudflare Tunnel, and GitOps
 date: 2025-12-27
 draft: false
+description: "How I built a self-hosted Hugo blog with Cloudflare Tunnel, Caddy, GitHub webhooks, OpenTofu, and Ansible."
 tags:
   - homelab
   - hugo

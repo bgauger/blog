@@ -1,0 +1,60 @@
+{{ define "main" }}
+  <section class="hero-panel">
+    <div class="hero-kicker">homelab / devops / self-hosting</div>
+    <h1>Operational notes from a homelab that occasionally behaves like production.</h1>
+    <p>
+      I write about Proxmox, GitOps, self-hosted services, automation, and the failure modes that turn basement infrastructure into useful engineering practice.
+    </p>
+    <div class="hero-actions">
+      <a class="button hero-button" href="/start-here/">Start here</a>
+      <a class="button hero-button secondary" href="/lab/">View the lab</a>
+      <a class="button hero-button secondary" href="/index.xml">RSS</a>
+    </div>
+  </section>
+
+  {{ $featured := first 3 (where .Site.RegularPages "Type" "posts") }}
+  {{ if $featured }}
+    <section class="featured-grid" aria-label="Featured posts">
+      {{ range $featured }}
+        <article class="featured-card">
+          <div class="card-date">{{ .Date.Format "2006-01-02" }}</div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
+          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 155 }}{{ end }}</p>
+        </article>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  <div class="section-heading">
+    <span>recent posts</span>
+  </div>
+
+  <div class="posts">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+      <article class="post on-list">
+        <h2 class="post-title">
+          <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+        </h2>
+        <div class="post-meta">
+          {{- if .Date -}}
+            <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+          {{- end -}}
+          {{- if (.Param "readingTime") -}}
+            <span class="post-reading-time">{{ .ReadingTime }} min read</span>
+          {{- end -}}
+        </div>
+        {{ if .Params.tags }}
+          <span class="post-tags">
+            {{ range .Params.tags }}#<a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">{{ . }}</a>&nbsp;{{ end }}
+          </span>
+        {{ end }}
+        <div class="post-content">
+          {{ if .Description }}<p>{{ .Description | markdownify }}</p>{{ else }}{{ .Summary }}{{ end }}
+        </div>
+        <a class="read-more button inline" href="{{ .RelPermalink }}">read</a>
+      </article>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </div>
+{{ end }}

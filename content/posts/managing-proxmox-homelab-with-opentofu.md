@@ -2,6 +2,7 @@
 title: "Managing My Proxmox Homelab with OpenTofu: From Clickops to GitOps"
 date: 2026-02-16
 draft: false
+description: "How I imported an existing Proxmox homelab into OpenTofu without tearing everything down."
 tags:
   - homelab
   - proxmox

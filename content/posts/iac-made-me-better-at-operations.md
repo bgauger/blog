@@ -2,6 +2,7 @@
 title: "Infrastructure as code made me better at operations"
 date: 2026-03-08
 draft: false
+description: "Infrastructure as code made my operations work more inspectable, repeatable, and easier to recover from."
 tags:
   - devops
   - infrastructure-as-code

@@ -2,6 +2,7 @@
 title: "The Phoenix Project: DevOps Lessons That Changed How I Run My Homelab"
 date: 2026-01-06
 draft: false
+description: "What The Phoenix Project taught me about DevOps, flow, feedback, and running a homelab with better operational habits."
 tags:
   - devops
   - books
