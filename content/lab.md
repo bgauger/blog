@@ -19,6 +19,40 @@ It changes over time, but the basic idea is stable: use a small self-hosted envi
 - Caddy and Cloudflare Tunnel for selected public services
 - Hugo, GitHub webhooks, and Obsidian for this blog
 
+## Hardware
+
+Last checked: 2026-06-16.
+
+| Host | Role | CPU | RAM | Boot/local storage | GPU/display |
+| --- | --- | --- | --- | --- | --- |
+| citadel | Main Proxmox node, storage/GPU-heavy workloads | Intel Xeon E5-2699 v4, 22 cores / 44 threads | 125 GiB | 2x TEAM TM8FP6001T NVMe, 953.9G each | NVIDIA GeForce GTX 1650, ASPEED BMC graphics |
+| destiny-ascension | Proxmox application node | AMD Ryzen 3 PRO 2200GE, 4 cores / 4 threads | 14 GiB | Patriot P210 128GB SSD | Integrated Radeon Vega |
+| everest | Proxmox infrastructure/networking node | AMD Ryzen 3 PRO 2200GE, 4 cores / 4 threads | 14 GiB | Patriot P210 128GB SSD | Integrated Radeon Vega |
+| killimanjaro | Proxmox lightweight services/blog node | AMD Ryzen 3 PRO 2200GE, 4 cores / 4 threads | 14 GiB | Patriot P210 128GB SSD | Integrated Radeon Vega |
+| seoul | Proxmox spare/new-services node | AMD Ryzen 3 PRO 2200GE, 4 cores / 4 threads | 14 GiB | Patriot P210 128GB SSD | Integrated Radeon Vega |
+
+All five Proxmox hosts currently see the shared storage targets `normandy`, `tempest`, and `backup`.
+
+## Storage
+
+| Name | What it is used for | Current visible state |
+| --- | --- | --- |
+| normandy | Durable/shared storage | NFS target visible to Proxmox, about 40 TB total |
+| tempest | Fast shared datastore / working set | NFS target visible to Proxmox, about 5.8 TB total |
+| backup | Proxmox Backup Server target | Backup target visible to Proxmox, about 3.8 TB total |
+
+Normandy is exposed as a TrueNAS system. From the TrueNAS API it currently reports TrueNAS 13.0-U6.8, 8 virtual CPU cores, and about 32 GiB of memory. The underlying storage hardware is passed through to that VM, so I do not treat the VM summary as the full physical disk inventory.
+
+## Current workload placement
+
+| Host | Notable running guests/services |
+| --- | --- |
+| citadel | TrueNAS, Servarr, Home Assistant, Project N.O.M.A.D., Technitium secondary, secondary Caddy proxy, Immich |
+| destiny-ascension | Portainer, Mealie, RomM, Homepage, ELK, Vaultwarden |
+| everest | Technitium, Netboot, Monitoring, primary Caddy proxy |
+| killimanjaro | Blog Hugo builder, Blog Caddy, Stirling PDF, Vikunja, Syncthing, FreshRSS, OpenWebUI, Audiobookshelf |
+| seoul | GitHub runner |
+
 ## What I use it for
 
 - testing self-hosted services
