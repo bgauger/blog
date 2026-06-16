@@ -2,7 +2,6 @@
 title: "What breaks when you treat a homelab like production"
 date: 2026-04-28
 draft: false
-description: "What works, and what gets weird, when you apply production operations habits to a homelab."
 tags:
   - homelab
   - devops

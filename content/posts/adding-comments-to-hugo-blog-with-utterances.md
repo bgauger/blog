@@ -2,7 +2,6 @@
 title: Adding Comments to My Hugo Blog with Utterances
 date: 2025-12-29
 draft: false
-description: "Why I chose Utterances for comments on a self-hosted Hugo blog after testing other options."
 tags:
   - homelab
   - hugo

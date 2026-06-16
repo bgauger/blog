@@ -2,7 +2,6 @@
 title: "Welcome to My Homelab Blog"
 date: 2025-12-27
 draft: false
-description: "An introduction to the self-hosted homelab blog and the infrastructure behind it."
 tags:
   - homelab
   - infrastructure

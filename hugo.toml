@@ -2,51 +2,24 @@ baseURL = 'https://blog.bengauger.com/'
 languageCode = 'en-us'
 title = 'Ben Gauger'
 theme = 'terminal'
-paginate = 10
 
 [params]
   author = 'Ben Gauger'
-  subtitle = 'Homelab, infrastructure, and operational notes from systems that break usefully.'
-  description = 'Practical notes on homelab infrastructure, Proxmox, GitOps, self-hosting, automation, and DevOps operations.'
-  keywords = 'homelab, proxmox, devops, gitops, self-hosting, opentofu, ansible, docker, infrastructure as code'
+  description = 'Homelab, Infrastructure, and Technology'
   githubUsername = 'bgauger'
-  ReadMore = 'read'
-  readingTime = true
-  contentTypeName = 'posts'
-  showLastUpdated = false
-
-  [params.logo]
-    logoText = 'Ben Gauger'
-    logoHomeLink = '/'
-
-  [params.analytics]
-    # Paste Cloudflare Web Analytics token here when ready.
-    cloudflareToken = ''
 
 [menu]
   [[menu.main]]
-    identifier = 'start'
-    name = 'Start Here'
-    url = '/start-here/'
-    weight = 5
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 10
 
   [[menu.main]]
     identifier = 'posts'
     name = 'Posts'
     url = '/posts/'
-    weight = 10
-
-  [[menu.main]]
-    identifier = 'lab'
-    name = 'Lab'
-    url = '/lab/'
     weight = 20
-
-  [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
-    weight = 30
 
 [markup]
   [markup.highlight]

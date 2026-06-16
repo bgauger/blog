@@ -2,7 +2,6 @@
 title: "Three Ansible patterns I keep reusing"
 date: 2026-04-12
 draft: false
-description: "Three Ansible patterns I keep using because they make homelab automation safer to rerun."
 tags:
   - ansible
   - homelab

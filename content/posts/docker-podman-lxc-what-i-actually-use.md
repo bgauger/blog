@@ -2,7 +2,6 @@
 title: "Docker, Podman, and LXC: what I actually use in my homelab"
 date: 2026-03-24
 draft: false
-description: "How I decide between Docker Compose, Podman, LXC containers, and full VMs in my Proxmox homelab."
 tags:
   - homelab
   - docker

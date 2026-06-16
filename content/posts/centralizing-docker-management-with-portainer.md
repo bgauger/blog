@@ -2,7 +2,6 @@
 title: Centralizing Docker Management Across My Homelab with Portainer
 date: 2026-02-16
 draft: false
-description: "How Portainer reduced SSH whack-a-mole across Docker hosts in my homelab."
 tags:
   - homelab
   - docker

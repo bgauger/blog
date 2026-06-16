@@ -2,7 +2,6 @@
 title: "What I learned running a static blog through Cloudflare Tunnel"
 date: 2026-06-05
 draft: false
-description: "Lessons from running a self-hosted static Hugo blog through Cloudflare Tunnel and GitOps."
 tags:
   - hugo
   - cloudflare
